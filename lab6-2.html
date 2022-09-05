@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            function calculate(){
+                let TextInput1 = document.getElementById("Number1");
+                let NumberInput1 = TextInput1.value;
+
+                let TextInput2 = document.getElementById("Number2");
+                let NumberInput2 = TextInput2.value;
+
+                let sign  = document.getElementById("sign")
+                let selectsign = sign.value;
+                if(selectsign == '+'){
+                        answer = parseInt(NumberInput1)+parseInt(NumberInput2)
+                }
+                if(selectsign == '-'){
+                        answer = parseInt(NumberInput1)-parseInt(NumberInput2)
+                }
+                if(selectsign == '*'){
+                        answer = parseInt(NumberInput1)*parseInt(NumberInput2)
+                }
+                if(selectsign == '/'){
+                        answer = parseInt(NumberInput1)/parseInt(NumberInput2)
+                }
+                Result.value = answer
+            }
+        </script>
+    </head>
+    <body>
+        <form action="">
+            <input type="number" id ="Number1">
+            <select id = "sign">
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+            </select>
+            <input type="number" id="Number2">
+            <label for=""> = </label>
+            <input type="text" id="Result" disabled>
+            <input type="button" value="Complete" onclick="calculate()">
+        </form>
+    </body>
+</html>
